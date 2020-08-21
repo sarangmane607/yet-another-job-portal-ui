@@ -1,0 +1,2 @@
+get firebase Secret to deploy through github
+firebase login:ci
