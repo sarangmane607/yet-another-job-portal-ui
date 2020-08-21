@@ -16,6 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build:dev": "env-cmd -f .env.development react-scripts build",
+    "build:firebase": "env-cmd -f .env.firebase react-scripts build",
     "build:prod": "env-cmd -f .env.production react-scripts build",
     "build:localprod": "env-cmd -f .env.production react-scripts build",
     "test": "react-scripts test --env=jsdom",
