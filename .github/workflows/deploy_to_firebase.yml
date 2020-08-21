@@ -16,12 +16,8 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         run: npm install
-      - name: Run Tests
-        env:
-          CI: true
-        run: npm test
       - name: Build
-        run: npm run build:prod
+        run: npm run build:firebase
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
