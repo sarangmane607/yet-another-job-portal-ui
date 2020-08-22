@@ -6,7 +6,7 @@ class Home extends Component {
         return (
             <div className="home-container">
                 <h1>Welcome to Yet Another Job Portal</h1>
-                <h3>Domo site buld for Telstra</h3>
+                <h3>Demo site buld for Telstra</h3>
             </div>
         )
     }
