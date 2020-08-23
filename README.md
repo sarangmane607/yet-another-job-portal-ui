@@ -6,7 +6,7 @@
 <br/>
 
 
-### Technoliges/Frameworks Used
+### Technologies/Frameworks Used
 ##### Front-End/UI
 1. React
 2. Redux (4.0)
