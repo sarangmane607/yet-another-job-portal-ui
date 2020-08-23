@@ -1,0 +1,15 @@
+.vie-app-container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.job-card{
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    padding-left: 40px;
+    margin-top: 20px;
+    box-shadow: 5px 10px 18px gray;
+}

@@ -5,3 +5,7 @@
 .s-alert-close::before, .s-alert-close::after {
     width: 2px;
 }
+
+.app-body{
+    background-color: #f5f5f5;
+}

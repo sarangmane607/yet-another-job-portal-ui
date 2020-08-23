@@ -1,6 +1,6 @@
 import { API_BASE_URL, ACCESS_TOKEN } from '../constants';
 
-const request = (options) => {
+export const request = (options) => {
     const headers = new Headers({
         'Content-Type': 'application/json',
     })

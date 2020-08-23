@@ -58,7 +58,7 @@ class SocialLogin extends Component {
                 <a className="btn btn-block social-btn google" href={GOOGLE_AUTH_URL}>
                     <img src={googleLogo} alt="Google" /> Log in with Google</a>
                 
-                <a className="btn btn-block social-btn github" href={GITHUB_AUTH_URL} style={{height:"100px"}}>
+                <a className="btn btn-block social-btn github" href={GITHUB_AUTH_URL} style={{height:"90px"}}>
                     <img src={githubLogo} alt="Github" /> Log in with Github
                     <span style={{fontSize:"small"}}>
                         <br/>

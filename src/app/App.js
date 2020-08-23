@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Route,
   Switch
@@ -8,6 +9,7 @@ import Home from '../home/Home';
 import Login from '../user/login/Login';
 import Signup from '../user/signup/Signup';
 import Profile from '../user/profile/Profile';
+import ViewApplications from '../components/UserApplications/ViewApplications';
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
 import NotFound from '../common/NotFound';
 import LoadingIndicator from '../common/LoadingIndicator';
@@ -16,29 +18,33 @@ import Alert from 'react-s-alert';
 import { connect } from 'react-redux';
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/slide.css';
-import './App.css';
+import './App1.css';
 
 class App extends Component {
 
   componentDidMount() {
     this.props.getCurrentUser();
+    this.props.loadActiveJobOpenings();
   }
 
   render() {
+
     if (this.props.loading) {
       return <LoadingIndicator />
     }
     console.log("in App", this.props.authenticated, this.props.currentUser);
     return (
-      <div className="app">
-        <div className="app-top-box">
+      <div className="box">
+        <div className="row header" style={{ zIndex: 1 }}>
           <AppHeader authenticated={this.props.authenticated} onLogout={this.props.logOut} />
         </div>
-        <div className="app-body">
+        <div className="row content" style={{ overflow: "auto" }}>
           <Switch>
             <Route exact path="/" component={Home}></Route>
             <PrivateRoute path="/profile" authenticated={this.props.authenticated} currentUser={this.props.currentUser}
               component={Profile}></PrivateRoute>
+            <PrivateRoute path="/viewApplications" authenticated={this.props.authenticated} currentUser={this.props.currentUser}
+              component={ViewApplications}></PrivateRoute>
             <Route path="/login"
               render={(props) => <Login authenticated={this.props.authenticated} {...props} />}></Route>
             <Route path="/signup"
@@ -72,9 +78,11 @@ const mapDispactchToProps = (dispatch) => {
     },
     logOut: () => {
       dispatch({ type: "LOG_OUT", payload: null });
+    },
+    loadActiveJobOpenings: () => {
+      dispatch({ type: "GET_ACTIVE_JOB_OPENINGS", payload: null });
     }
   }
 }
 
 export default connect(mapStateToProps, mapDispactchToProps)(App);
-

@@ -19,8 +19,16 @@ input[type="radio"] {
   padding: 0;
 }
 
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
 body {
   margin: 0;
+  min-height: 100%;
+  width: 100%;
   padding: 0;
   font-size: 16px;
   font-weight: 400;
