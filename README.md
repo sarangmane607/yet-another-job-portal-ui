@@ -9,7 +9,7 @@
 ### Technoliges/Frameworks Used
 ##### Front-End/UI
 1. React
-2. Redux
+2. Redux (4.0)
 3. Router
 4. [material-ui](material-ui.com)
 
@@ -18,7 +18,7 @@
 1. Java (1.8 and above)
 2. Spting boot (2.2.6)
 3. JPA
-4. JWT (For stateless server)
+4. JWT (JSON Web Toke, For stateless server)
 5. h2 in memory database
 <br/>
 
@@ -36,9 +36,10 @@ Currently **backend (java)** is deployed on **[heroku](https://www.heroku.com/)*
 
 1. check-out **[this](https://github.com/sarangmane607/yet-another-job-portal-ui)** repo
 
-2. run below command from inside repo folder
+2. run below commands from inside repo folder
 
 ```
+npm install
 npm run start:dev
 ```
 ##### ***If your backend is not running on 8080 port then modify ```REACT_APP_API_BASE_URL``` parameter from  ```.env.development``` file***
@@ -56,7 +57,7 @@ i.e ```http://localhost:3000/oauth2/redirect```
       - https://yet-another-job-portal.web.app/oauth2/redirect
     ...
 ```
-3. open commond prompt
+3. open command prompt
 4. change directory to repo
 5. run ```mvn install``` to build spring boot's fat jar file
 6. run ```java -jar target/yet-another-job-portal-0.0.1-SNAPSHOT.jar```
