@@ -1,5 +1,5 @@
 # Demo Application for Telstra
-I call it "Yet Another Job Portal" :)
+"Yet Another Job Portal"
 
 ### Application is deployed on internet, access it **[here](https://yet-another-job-portal.web.app/)** 
 ###### *Because backend(java) is deployed on free heroku server, APIs are little bit slow.*
