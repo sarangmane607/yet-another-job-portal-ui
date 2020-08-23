@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import JobCard from './JobCard';
 
@@ -30,6 +30,7 @@ const mapStateToProps = (state, b) => {
                 appliedJob => appliedJob.jobApplicationId.jobOpeningId === jobDetail.jobOpeningId
             );
             jobDetail.isApplied = isApplied != null;
+            return null;
         })
     }
     console.log("JobOpenings newState", newState);

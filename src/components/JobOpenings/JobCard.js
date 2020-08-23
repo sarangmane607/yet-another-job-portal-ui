@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -111,7 +111,7 @@ function JobCard(props) {
                         <br />
                         Location : {props.jobDetail.location}
                         <br />
-                        Employment : {props.jobDetail.employmentType == "fulltime" ? "Full time" : "Part Time"}
+                        Employment : {props.jobDetail.employmentType === "fulltime" ? "Full time" : "Part Time"}
 
                         <br />
                         {props.jobDetail.skills != null && props.jobDetail.skills.length > 0 &&
