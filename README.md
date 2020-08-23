@@ -12,7 +12,7 @@
 2. Redux (4.0)
 3. Router
 4. [material-ui](material-ui.com)
-
+5. GitHub actions for continuous deployment at firebase servers
 
 ##### Back-End/Java
 1. Java (1.8 and above)
@@ -20,6 +20,7 @@
 3. JPA
 4. JWT (JSON Web Toke, For stateless server)
 5. h2 in memory database
+6. GitHub actions for continuous deployment at heroku servers
 <br/>
 
 
